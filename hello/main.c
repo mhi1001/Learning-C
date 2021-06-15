@@ -1,7 +1,6 @@
 #include <stdio.h>
-/*print Fahrenheit-Celsius table
-	for fahr = 0, 20, ..., 300; */
-void main()
+
+void temperature_tables()
 {
 	float fahr, celsius;
 	int lower, upper, step;
@@ -19,7 +18,7 @@ void main()
 		printf("%7.0f %10.1f\n", fahr, celsius);
 		fahr = fahr + step;
 	}
-	//Reset the values
+	
 
 	celsius = lower;
 	printf("##########################\n");
@@ -30,4 +29,9 @@ void main()
 		printf("%7.1f %10.0f\n", celsius, fahr);
 		celsius = celsius + step;
 	}
+}
+
+void main()
+{
+	temperature_tables();
 }
